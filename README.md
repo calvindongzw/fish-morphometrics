@@ -57,7 +57,7 @@ From tables 1 and 2, we had imbalanced labeling data. For countries, the amount 
 
 We observed some color differences that are not from the fish itself but probably from different daylights or angles when taking those pictures. So, we may try to adjust them with greyscale technique. Even though this will ignore color diversity if fish in Belize and Honduras truly have different colors.
 
-<img src="./color_diff.png" width="360" >
+<img src="./pics/color_diff.png" width="360" >
 
 *Figure 1. Color difference of images from two countries*
 
@@ -65,11 +65,11 @@ We observed some color differences that are not from the fish itself but probabl
 
 We also observed obvious brightness differences between Belize and Honduras. It seems images from Honduras are brighter than those from Belize. We will adjust the brightness to the same scale when doing data preprocessing.
 
-<img src="./brightness.png" height="360" >
+<img src="./pics/brightness.png" height="360" >
 
 *Figure 2. Brightness difference of images from two countries*
 
-<img src="./grey_scale.png" height="360" >
+<img src="./pics/grey_scale.png" height="360" >
 
 *Figure 3. Grayscale and brightness adjust eliminate the color and brightness difference*
 
@@ -77,7 +77,7 @@ We also observed obvious brightness differences between Belize and Honduras. It 
 
 Originally, we didn't want to consider images with stripe backgrounds. While after exploring the raw data, we found available images were limited. Therefore we decided to bring in those with stripe backgrounds. The problem is whether those stripes in backgrounds will disturb prediction models when extracting useful features. We tested some models with shallow convolutional layers. The results are shown below:
 
-<img src="./background.png" height="360" >
+<img src="./pics/background.png" height="360" >
 
 *Figure 4. Stripe of background results in noise features*
 
@@ -87,7 +87,7 @@ The models can extract the contour of fish as well as detailed information such 
 
 Since the raw images were used as samples in biostatistical and chemical methodologies, many of them have color panels at edges and corners. Those objects in raw images will be noise for CNN models therefore we will center crop raw images in order to remove those noise.
 
-<img src="./center_crop.png" height="360" >
+<img src="./pics/center_crop.png" height="360" >
 
 *Figure 5. Center cropping captures only features from fishes*
 
@@ -117,7 +117,7 @@ We used pre-trained ResNet-34 as the initial model. We resized raw training imag
 
 The best accuracy is 97.57%.  We explored misclassified images and found for Belize, there were only two misclassified images. Both of them are with stripe backgrounds. As to Honduras, 10 images were misclassified. 9 of them are with stripe backgrounds. Therefore, as we assumed, stripe backgrounds are the challenges of prediction models.
 
-<img src="./model_mis.png" width="360" >
+<img src="./pics/model_mis.png" width="360" >
 
 *Figure 8 Misclassified Images of Belize*
 
