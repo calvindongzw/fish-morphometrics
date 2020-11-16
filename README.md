@@ -1,9 +1,5 @@
 # fish-morphometrics
 
-**Working Title:**
-
-Quantifying fishing pressure through fish morphometrics
-
 **Goal**
 
 Successfully assign fish to their fishing ground of origin with a high level of accuracy from photographic images. Firstly, be able to distinguish fish from the fisheries of Belize and Honduras, and secondly, assign fish to their fishing grounds.
@@ -23,7 +19,6 @@ Fisheries management includes managing exploited fish populations, estimating ma
 One recent study from the Smithsonian Institute in 2018[1] utilizes genetic analysis, microchemistry, and morphometrics to identify fish origins, they found out that morphometrics analysis is cost-effective and accurate to assign fish ground in 5-10 km geographical ranges. Also, they found that there are distinct shapes in different fishing grounds of yellow snapper fish, which suggests that it is possible to automate the morphometric analysis using digital images of sample fish and to incorporate these results into a user-friendly system that could be easily interpreted by other stakeholders.
 
 Image classification is a complex supervised learning problem and has been an important topic in the field of computer vision. Image classification problems in our project range from binary classification like identifying which country the fish comes from to multiclass classification such as identifying the specific fishing ground. An image classification problem is usually solved by pre-processing images, extracting features from images, training models, and classifying the target object. Deep learning models have been widely used in image classification problems, however, deep neural networks are usually difficult to train due to tremendous parameters. Thus, we will use a ResNet34 model[2] that presents a residual learning framework, which is easier to optimize and gains accuracy from deeper networks.
-
 
 ## Data
 
@@ -133,6 +128,7 @@ The best accuracy is 97.57%.  We explored misclassified images and found for Bel
 |                              | Tested on raw images | 
 |------------------------------|----------------------|
 | Model with RGB inputs        | 97.29%               | 
+
 The best accuracy is 61.71%. Since all models have a bad performance, we broke into each fishing ground to see what happened.
 
 *Table 5. Summary of classification of fishing grounds*
