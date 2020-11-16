@@ -57,7 +57,7 @@ From tables 1 and 2, we had imbalanced labeling data. For countries, the amount 
 
 We observed some color differences that are not from the fish itself but probably from different daylights or angles when taking those pictures. So, we may try to adjust them with greyscale technique. Even though this will ignore color diversity if fish in Belize and Honduras truly have different colors.
 
-<img src="https://gitlab.oit.duke.edu/duke-mids/workingprojectrepositories/2020-2021/fish-morphometrics/-/tree/master/Team_Logistics/color_diff.png" width="360" >
+<img src="./color_diff.png" width="360" >
 
 *Figure 1. Color difference of images from two countries*
 
